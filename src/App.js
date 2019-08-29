@@ -4,7 +4,6 @@ import './App.css';
 
 function App() {
   console.log(process.env);
-  console.log("test");
   return (
     <div className="App">
       <header className="App-header">
@@ -12,14 +11,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+        {process.env.REACT_APP_SECRET_CODE}
+        </p>
+        <p>
+          {process.env.REACT_APP_HOST_ENV}
+        </p>
       </header>
     </div>
   );
